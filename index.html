@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Timer Tab Landscape</title>
+  <link rel="stylesheet" href="minang.css">
+</head>
+<body>
+  <div class="logoBar">
+    <img src="Logo Warnet dan Komputer Hitam Kuning Minimalis.png" alt="Logo 1" width="122"> 
+    <img src="Gambar_WhatsApp_2025-08-25_pukul_19.48.40_353ca491-removebg-preview.png" alt="Logo 2" width="100"> 
+    <img src="Gambar_WhatsApp_2025-08-25_pukul_19.49.04_143f0c0a-removebg-preview.png" alt="Logo 3" width="111">
+  </div>
+
+  <h2>azmadev warnet</h2>
+  <button onclick="addTab()">+ Tambahkan Tab Baru</button>
+
+  <div class="searchBox">
+    <input type="text" id="searchInput" placeholder="Cari nama...">
+  </div>
+
+  <div class="scrollWrapper">
+    <button class="scrollBtn left" onclick="scrollTabs(-1)">&#9664;</button>
+    <div id="tabs"></div>
+    <button class="scrollBtn right" onclick="scrollTabs(1)">&#9654;</button>
+  </div>
+
+  <audio id="alarmSound" src="k2k2.mp3" preload="auto"></audio>
+<script src="azma.js"></script>
+</html>

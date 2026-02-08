@@ -1,0 +1,145 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  padding: 20px;
+  background: radial-gradient(circle at top left, #0f0c29, #302b63, #24243e);
+  color: white;
+  min-height: 100vh;
+  animation: bgMove 15s ease infinite;
+}
+@keyframes bgMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.logoBar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+.logoBar img { filter: drop-shadow(0 0 8px rgba(255,255,255,0.6)); }
+
+h2 {
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  text-shadow: 0 0 15px cyan, 0 0 30px blue;
+  margin-bottom: 15px;
+}
+
+button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+button:hover { transform: scale(1.05); box-shadow: 0 0 12px rgba(255,255,255,0.6); }
+
+.scrollWrapper { 
+  position: relative; 
+  margin-top: 20px; 
+}
+.scrollBtn {
+  position: absolute; 
+  top: 50%; 
+  transform: translateY(-50%);
+  background: rgba(255,255,255,0.2); 
+  color: white;
+  border: 1px solid rgba(255,255,255,0.4);
+  border-radius: 50%; 
+  width: 40px; 
+  height: 40px;
+  font-size: 20px; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
+  cursor: pointer; 
+  z-index: 10; 
+  backdrop-filter: blur(6px);
+}
+.scrollBtn:hover { background: rgba(255,255,255,0.4); }
+
+/* 🔥 Perubahan di sini biar ga terlalu kepinggir */
+.scrollBtn.left { left: 10px; }
+.scrollBtn.right { right: 10px; }
+
+#tabs {
+  display: flex; 
+  gap: 15px; 
+  flex-wrap: nowrap;
+  overflow-x: auto; 
+  padding: 15px 0; 
+  scroll-behavior: smooth;
+}
+.tab {
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  padding: 15px; 
+  border-radius: 15px;
+  min-width: 300px; 
+  display: flex; 
+  flex-direction: column; 
+  align-items: flex-start;
+  backdrop-filter: blur(8px); 
+  transition: all 0.3s ease;
+}
+.tab h4 { 
+  margin: 0 0 10px 0; 
+  font-size: 18px; 
+  text-shadow: 0 0 8px rgba(255,255,255,0.6); 
+}
+label { 
+  font-size: 14px; 
+  margin-top: 5px; 
+  width: 100%; 
+}
+input {
+  width: 100%; 
+  padding: 6px; 
+  margin-top: 3px;
+  border: 1px solid #ccc; 
+  border-radius: 6px; 
+  font-family: inherit;
+}
+.btnGroup { 
+  display: flex; 
+  gap: 8px; 
+  margin-top: 12px; 
+}
+.startBtn { background: #4caf50; color: white; }
+.stopBtn { background: red; color: white; }
+.resetBtn { background: #2196f3; color: white; }
+.timeDisplay {
+  margin-top: 10px; 
+  font-size: 20px; 
+  font-weight: bold;
+  align-self: center; 
+  text-shadow: 0 0 12px lime;
+}
+
+.tab.finished {
+  background: rgba(255,0,0,0.2);
+  border: 1px solid red;
+  animation: glowRed 1s infinite alternate;
+}
+@keyframes glowRed {
+  from { box-shadow: 0 0 10px red, 0 0 20px crimson, 0 0 30px darkred; }
+  to { box-shadow: 0 0 25px red, 0 0 50px crimson, 0 0 75px darkred; }
+}
+
+.searchBox {
+  margin: 15px 0;
+  text-align: center;
+}
+.searchBox input {
+  width: 300px;
+  padding: 8px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  text-align: center;
+}
